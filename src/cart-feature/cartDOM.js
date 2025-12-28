@@ -7,6 +7,7 @@ let cartCloseBtn = document.querySelector("#cartCloseBtn");
 export function addCartFeature(){
     cartCloseBtn.addEventListener("click", e => toggleCart());
     cartBtn.addEventListener("click", e => toggleCart());
+    overlay.addEventListener("click", e => toggleCart());
 }
 
 //toggle cart to display/not display

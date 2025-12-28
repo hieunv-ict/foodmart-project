@@ -138,6 +138,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .header__icon-btn:hover {
