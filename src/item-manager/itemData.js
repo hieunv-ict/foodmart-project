@@ -41,6 +41,15 @@ mockProductData.forEach(data => {
 
 // Render products to DOM
 export function setProductCards(){
+    for (let p of products){
+        let itemId = p.dataset.itemid; // use data attributes (added manually) to 2 product card
+        let itemData = itemList[itemId];
+        let addBtn = p.querySelector(".product-card__add-btn");
+        if (itemId !== undefined){
+            addBtn.addEventListener("click", e => addToCart(itemData, 1));
+        }
+        
+    }
     // Render trending products
     renderProductItems(trendingProducts, '#trendingProductsGrid', addToCart);
     
