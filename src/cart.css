@@ -87,6 +87,7 @@
     padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
+    align-items: center;
 }
 
 .item-image {
@@ -104,18 +105,19 @@
 .item-details {
     flex: 1;
     min-width: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .item-name {
     font-weight: 600;
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
+    font-size: 1rem;
 }
 
 .item-description {
     color: #6b7280;
     font-size: 0.75rem;
-    margin-bottom: 0.5rem;
 }
 
 .item-controls {
@@ -167,7 +169,6 @@
     cursor: pointer;
     border-radius: 0.5rem;
     transition: background-color 0.2s;
-    align-self: flex-start;
 }
 
 .delete-btn:hover {
@@ -199,7 +200,7 @@
 .checkout-btn {
     width: 100%;
     background-color: #fbbf24;
-    color: #111827;
+    color:#f3f4f6;
     border: none;
     padding: 0.75rem;
     border-radius: 0.5rem;

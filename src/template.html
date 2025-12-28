@@ -17,7 +17,8 @@
             <h2>Your cart</h2>
             <h2 id="cart-total-quantity">2</h2>
         </div>
-        <div class="cart-items" id="cartItems">
+        <div class="cart-item-container"></div>
+        <!-- <div class="cart-items" id="cartItems">
             <div class="cart-empty" id="cartEmpty">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M9 2L11 8M15 8L17 2M4 6h16l-1.5 10.5h-13L4 6z"/>
@@ -26,9 +27,11 @@
                 </svg>
                 <p>Your cart is empty</p>
             </div>
-        </div>
+        </div> -->
+        
+        
 
-        <div class="cart-footer" id="cartFooter" style="display: none;">
+        <div class="cart-footer" id="cartFooter">
             <div class="cart-total">
                 <span class="total-label">Total (USD):</span>
                 <span class="total-amount" id="totalAmount">$0</span>
@@ -219,17 +222,17 @@
             
             <div class="products__grid">
                 <!-- Product Card 1 -->
-                <div class="product-card">
+                <div class="product-card" data-itemId = "1">
                     <button class="product-card__wishlist">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
                         </svg>
                     </button>
                     <div class="product-card__image">
-                        <img src="./assets/resources/thumb-cucumber.png" alt="Sunstar Fresh Melon Juice">
+                        <img src="./assets/resources/thumb-bananas.png" alt="Sunstar Fresh Melon Juice">
                     </div>
                     <div class="product-card__content">
-                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <h3 class="product-card__title">Test product với add to cart - 1</h3>
                         <div class="product-card__rating">
                             <span class="product-card__stars">★★★★★</span>
                             <span class="product-card__reviews">4.5</span>
@@ -247,7 +250,7 @@
                 </div>
 
                 <!-- Product Card 2 -->
-                <div class="product-card">
+                <div class="product-card" data-itemId = "2">
                     <button class="product-card__wishlist">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
@@ -257,7 +260,7 @@
                         <img src="./assets/resources/thumb-milk.png" alt="Sunstar Fresh Melon Juice">
                     </div>
                     <div class="product-card__content">
-                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <h3 class="product-card__title">Test product với add to cart - 2</h3>
                         <div class="product-card__rating">
                             <span class="product-card__stars">★★★★★</span>
                             <span class="product-card__reviews">4.5</span>
