@@ -20,12 +20,11 @@
     width: 100%;
     max-width: 28rem;
     background-color: white;
-    box-shadow: -4px 0 6px rgba(0,0,0,0.1);
     z-index: 101;
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
 }
 
 .cart-sidebar.active {
@@ -37,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
     padding: 1rem 0.5rem;
     border-bottom: 1px solid #e5e7eb;
 }
@@ -46,6 +46,13 @@
     color:#fbbf24;
 }
 
+.cart-item-container{
+    flex: 1;                 /* Takes all available space */
+    overflow-y: auto;        /* Scrolls vertically when content overflows */
+    overflow-x: hidden;      /* No horizontal scroll */
+    padding: 1.5rem;
+}
+
 .close-btn {
     padding: 0.5rem;
     background: none;
@@ -53,6 +60,7 @@
     cursor: pointer;
     border-radius: 0.5rem;
     transition: background-color 0.2s;
+    position: absolute;      /* Position close button absolutely */
 }
 
 .close-btn:hover {
@@ -82,7 +90,7 @@
 /* ===== INDIVIDUAL CART ITEM ===== */
 .cart-item {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     background-color: #f9fafb;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -108,6 +116,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .item-name {
@@ -163,7 +172,6 @@
 
 /* ===== DELETE BUTTON ===== */
 .delete-btn {
-    padding: 0.5rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -179,6 +187,8 @@
 .cart-footer {
     border-top: 1px solid #e5e7eb;
     padding: 1.5rem;
+    flex-shrink: 0;          /* Fixed height - won't shrink */
+    border-top: 1px solid #e5e7eb;
 }
 
 .cart-total {

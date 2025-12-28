@@ -41,6 +41,7 @@ mockProductData.forEach(data => {
 
 // Render products to DOM
 export function setProductCards(){
+    let products = document.querySelectorAll(".product-card");
     for (let p of products){
         let itemId = p.dataset.itemid; // use data attributes (added manually) to 2 product card
         let itemData = itemList[itemId];
