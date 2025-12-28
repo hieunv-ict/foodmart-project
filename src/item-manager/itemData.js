@@ -17,6 +17,9 @@ export function setProductCards(){
         let itemId = p.dataset.itemid; // use data attributes (added manually) to 2 product card
         let itemData = itemList[itemId];
         let addBtn = p.querySelector(".product-card__add-btn");
-        addBtn.addEventListener("click", e => addToCart(itemData, 1));
+        if (itemId !== undefined){
+            addBtn.addEventListener("click", e => addToCart(itemData, 1));
+        }
+        
     }
 }
