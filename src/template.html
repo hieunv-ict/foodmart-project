@@ -3,9 +3,649 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Foodmart - Organic eCommerce Shop</title>
 </head>
 <body>
-    <h1>Foodmart Project</h1>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="./assets/resources/logo.png" alt="Foodmart Logo" class="header__logo-img">
+            </div>
+            
+            <div class="header__search">
+                <select class="header__search-category">
+                    <option>All Categories</option>
+                </select>
+                <input type="text" class="header__search-input" placeholder="Search for more than 20,000 products">
+                <button class="header__search-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM18 18l-4-4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="header__actions">
+                <button class="header__icon-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="header__icon-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="header__cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 2L7 6M17 2l2 4M1 6h22M3 6h18l-2 13H5L3 6zM10 10v4M14 10v4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <div class="header__cart-info">
+                        <span class="header__cart-label">Shopping cart:</span>
+                        <span class="header__cart-price">$1290.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="nav">
+            <div class="nav__container">
+                <button class="nav__category-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M2 4h16M2 10h16M2 16h16" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    Shop by Departments
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="#" class="nav__link">Woman</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Men's</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Kids</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Accessories</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link nav__link--dropdown">Pages <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Brand</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Sale</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__main">
+                <div class="hero__banner hero__banner--primary">
+                    <div class="hero__content">
+                        <span class="hero__badge">100% Natural</span>
+                        <h1 class="hero__title">Heinz Tomato Ketchup</h1>
+                        <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos massa nisl tempor eleifend.</p>
+                        <button class="hero__btn">SHOP COLLECTION</button>
+                    </div>
+                    <div class="hero__image">
+                        <img src="./assets/resources/thumb-tomatoketchup.png" alt="Heinz Tomato Ketchup">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero__sidebar">
+                <div class="hero__banner hero__banner--secondary hero__banner--green">
+                    <div class="hero__content">
+                        <span class="hero__discount">20% Off</span>
+                        <h2 class="hero__subtitle">Fruits & Vegetables</h2>
+                        <a href="#" class="hero__link">Shop Collection →</a>
+                    </div>
+                    <div class="hero__image">
+                        <img src="./assets/resources/ad-image-1.png" alt="Fruits & Vegetables">
+                    </div>
+                </div>
+                
+                <div class="hero__banner hero__banner--secondary hero__banner--pink">
+                    <div class="hero__content">
+                        <span class="hero__discount">15% Off</span>
+                        <h2 class="hero__subtitle">Baked Products</h2>
+                        <a href="#" class="hero__link">Shop Collection →</a>
+                    </div>
+                    <div class="hero__image">
+                        <img src="./assets/resources/ad-image-2.png" alt="Baked Products">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category">
+        <div class="category__container">
+            <div class="category__header">
+                <h2 class="category__title">Category</h2>
+                <a href="#" class="category__view-all">
+                    View All Categories 
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="category__grid">
+                <div class="category__item">
+                    <div class="category__icon">
+                        <img src="./assets/resources/icon-vegetables-broccoli.png" alt="Fruits & Veges">
+                    </div>
+                    <span class="category__name">Fruits & Veges</span>
+                </div>
+                <div class="category__item">
+                    <div class="category__icon">
+                        <img src="./assets/resources/icon-bread-baguette.png" alt="Breads & Sweets">
+                    </div>
+                    <span class="category__name">Breads & Sweets</span>
+                </div>
+                <div class="category__item">
+                    <div class="category__icon">
+                        <img src="./assets/resources/icon-bread-herb-flour.png" alt="Fruits & Veges">
+                    </div>
+                    <span class="category__name">Fruits & Veges</span>
+                </div>
+                <div class="category__item">
+                    <div class="category__icon">
+                        <img src="./assets/resources/icon-animal-products-drumsticks.png" alt="Fruits & Veges">
+                    </div>
+                    <span class="category__name">Fruits & Veges</span>
+                </div>
+                <div class="category__item">
+                    <div class="category__icon">
+                        <img src="./assets/resources/icon-soft-drinks-bottle.png" alt="Fruits & Veges">
+                    </div>
+                    <span class="category__name">Fruits & Veges</span>
+                </div>
+                <div class="category__item">
+                    <div class="category__icon">
+                        <img src="./assets/resources/icon-wine-glass-bottle.png" alt="Fruits & Veges">
+                    </div>
+                    <span class="category__name">Fruits & Veges</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="products">
+        <div class="products__container">
+            <div class="products__header">
+                <h2 class="products__title">Trending Products</h2>
+                <div class="products__tabs">
+                    <button class="products__tab products__tab--active">ALL</button>
+                    <button class="products__tab">FRUITS & VEGES</button>
+                    <button class="products__tab">JUICES</button>
+                </div>
+            </div>
+            
+            <div class="products__grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-cucumber.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-milk.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-tomatoes.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-tomatoketchup.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-bananas.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-bananas.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banners -->
+    <section class="promo">
+        <div class="promo__container">
+            <div class="promo__banner promo__banner--chocolate">
+                <div class="promo__content">
+                    <span class="promo__discount">Upto 25% Off</span>
+                    <h2 class="promo__title">Luxa Dark Chocolate</h2>
+                    <p class="promo__description">Organic & creamy vanilla flavour creamy muffins.</p>
+                    <button class="promo__btn">SHOP NOW</button>
+                </div>
+                <div class="promo__image">
+                    <img src="./assets/resources/product-thumb-1.png" alt="Luxa Dark Chocolate">
+                </div>
+            </div>
+            
+            <div class="promo__banner promo__banner--muffins">
+                <div class="promo__content">
+                    <span class="promo__discount">Upto 25% Off</span>
+                    <h2 class="promo__title">Creamy Muffins</h2>
+                    <p class="promo__description">Organic & creamy vanilla flavour creamy muffins.</p>
+                    <button class="promo__btn">SHOP NOW</button>
+                </div>
+                <div class="promo__image">
+                    <img src="./assets/resources/product-thumb-2.png" alt="Creamy Muffins">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Selling Products -->
+    <section class="products products--best-selling">
+        <div class="products__container">
+            <div class="products__header">
+                <h2 class="products__title">Best selling products</h2>
+                <a href="#" class="products__view-all">
+                    View All Categories 
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="products__grid">
+                <!-- Best Product 1 -->
+                <div class="product-card">
+                    <span class="product-card__badge">25%</span>
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-tomatoes.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Product 2 -->
+                <div class="product-card">
+                    <span class="product-card__badge">25%</span>
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-tomatoketchup.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Product 3 -->
+                <div class="product-card">
+                    <span class="product-card__badge">25%</span>
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-bananas.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Product 4 -->
+                <div class="product-card">
+                    <span class="product-card__badge">25%</span>
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-bananas.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Product 5 -->
+                <div class="product-card">
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-tomatoes.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Product 6 -->
+                <div class="product-card">
+                    <button class="product-card__wishlist">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.37 3.38a5 5 0 0 0-7.07 0L10 3.67l-.3-.29a5 5 0 1 0-7.07 7.07l.3.3L10 17.82l7.07-7.07.3-.3a5 5 0 0 0 0-7.07z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <div class="product-card__image">
+                        <img src="./assets/resources/thumb-tomatoketchup.png" alt="Sunstar Fresh Melon Juice">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Sunstar Fresh Melon Juice</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__reviews">4.5</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">$18.00</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__qty-btn">-</button>
+                                <input type="number" class="product-card__qty" value="1">
+                                <button class="product-card__qty-btn">+</button>
+                                <button class="product-card__add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__main">
+                <div class="footer__column footer__column--about">
+                    <div class="footer__logo">
+                        <img src="./assets/resources/logo.png" alt="Foodmart Logo">
+                    </div>
+                    <p class="footer__description">Subscribe to our newsletter for more updates and offers.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link">f</a>
+                        <a href="#" class="footer__social-link">t</a>
+                        <a href="#" class="footer__social-link">p</a>
+                        <a href="#" class="footer__social-link">in</a>
+                        <a href="#" class="footer__social-link">i</a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Ultras</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">About Us</a></li>
+                        <li><a href="#" class="footer__link">Conditions</a></li>
+                        <li><a href="#" class="footer__link">Our Journals</a></li>
+                        <li><a href="#" class="footer__link">Careers</a></li>
+                        <li><a href="#" class="footer__link">Affiliate Programme</a></li>
+                        <li><a href="#" class="footer__link">Ultras Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Customer Service</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">FAQ</a></li>
+                        <li><a href="#" class="footer__link">Contact</a></li>
+                        <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer__link">Returns & Refunds</a></li>
+                        <li><a href="#" class="footer__link">Cookie Guidelines</a></li>
+                        <li><a href="#" class="footer__link">Delivery Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Customer Service</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">FAQ</a></li>
+                        <li><a href="#" class="footer__link">Contact</a></li>
+                        <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer__link">Returns & Refunds</a></li>
+                        <li><a href="#" class="footer__link">Cookie Guidelines</a></li>
+                        <li><a href="#" class="footer__link">Delivery Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column footer__column--newsletter">
+                    <h3 class="footer__title">Subscribe Us</h3>
+                    <p class="footer__newsletter-text">Subscribe to our newsletter to get updates about our grand offers.</p>
+                    <form class="footer__newsletter">
+                        <input type="email" class="footer__newsletter-input" placeholder="Email Address">
+                        <button class="footer__newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2021 Foodmart. All rights reserved.</p>
+                <div class="footer__credits">
+                    <span>Free HTML Template by</span>
+                    <a href="#" class="footer__credits-link">TemplatesJungle</a>
+                    <span>Distributed by</span>
+                    <a href="#" class="footer__credits-link">ThemeWagon</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
