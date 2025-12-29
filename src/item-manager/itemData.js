@@ -15,26 +15,29 @@ import { getProductList, fetchProductData } from "./fetchData";
 //   // { id: "8", name: "Organic Ketchup", price: 7.5, imgSrc: ketchupImg },
 // ];
 
-const mockProductData =  await getProductList();
+const mockProductData = await getProductList();
 // Map mock data to ProductItem instances
 export let itemList = {};
 export let trendingProducts = [];
 export let bestSellingProducts = [];
+export let categories = [];
+
 console.log(mockProductData);
-// Map trending products
+
+// Build itemList
 mockProductData.forEach((product) => {
-  //const product = new ProductItem(data.id, data.name, data.price, data.imgSrc, data.category, data.description, data.soldThisMonth, data.soldthisYear);
   itemList[product.id] = product;
-  trendingProducts.push(product);
 });
 
+// Get top 10 trending products by soldThisYear (descending)
+trendingProducts = [...mockProductData]
+  .sort((a, b) => b.soldThisYear - a.soldThisYear)
+  .slice(0, 10);
 
-// Map best selling products
-mockProductData.forEach((product) => {
-  // const product = new ProductItem(data.id, data.name, data.price, data.imgSrc, data.category, data.description, data.soldThisMonth, data.soldthisYear);
-  itemList[product.id] = product;
-  bestSellingProducts.push(product);
-});
+// Get top 10 best selling products by soldThisMonth (descending)
+bestSellingProducts = [...mockProductData]
+  .sort((a, b) => b.soldThisMonth - a.soldThisMonth)
+  .slice(0, 10);
 
 // Render products to DOM
 export function setProductCards() {
@@ -47,21 +50,23 @@ export function setProductCards() {
       addBtn.addEventListener("click", (e) => addToCart(itemData, 1));
     }
   }
-  // Render trending products
+
+  // Render trending products (top 10 by soldThisYear)
   renderProductItems(trendingProducts, "#trendingProductsGrid", addToCart);
 
-  // Render best selling products with badges
+  // Render best selling products (top 10 by soldThisMonth) with badges
   renderProductItems(
     bestSellingProducts,
     "#bestSellingProductsGrid",
     addToCart,
     true,
-    "25%"
+    "Hot"
   );
 }
-// Cập nhật sản phẩm hiển thị khi nhấn nút
+
+// Update product display when button is clicked
 function updateProductDisplay(products) {
   const grid = document.getElementById("bestSellingProductsGrid");
-  grid.innerHTML = ""; 
+  grid.innerHTML = "";
   renderProductItems(products, "#bestSellingProductsGrid", addToCart);
 }

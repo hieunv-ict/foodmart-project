@@ -1,17 +1,10 @@
 import { ProductItem } from "../models/ProductItem";
-// Import images
-let bananaImg = require("../assets/product-thumbnails/bananas.png");
-let milkImg = require("../assets/product-thumbnails/milk.png");
-let tomatoImg = require("../assets/product-thumbnails/tomatoes.png");
-let ketchupImg = require("../assets/product-thumbnails/tomatoketchup.png");
-const images = {
-  "1": bananaImg,
-  "2": milkImg,
-  "3": tomatoImg,
-  "4": ketchupImg,
-}
+
+// AWS S3 base URL for product images
+const AWS_IMAGE_BASE_URL = "https://foodmart-mpfe.s3.ap-southeast-2.amazonaws.com/product-thumbnails/";
+
 export async function fetchProductData(){
-    var response = await fetch('https://6952316c3b3c518fca11c538.mockapi.io/foodmart/api/v1/products');
+    var response = await fetch('https://695231aa3b3c518fca11c5e8.mockapi.io/foodmart/api/v1/products');
         
         if (!response.ok) {
             throw new Error('Failed to fetch products: ' + response.status);
@@ -28,7 +21,7 @@ export async function getProductList(){
                 item.id,
                 item.name,
                 item.price,
-                images[item.id],
+                AWS_IMAGE_BASE_URL + item.imgSrc,
                 item.category,
                 item.description,
                 item.soldThisMonth,
