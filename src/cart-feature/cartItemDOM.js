@@ -2,10 +2,27 @@ import { changeItemQty, removeItem, getNumberOfItems, getTotalPrice } from "./ca
 
 let totalPriceElem = document.querySelector("#totalAmount");
 let numberOfItem = document.querySelector("#cart-total-quantity");
+let cartBadge = document.querySelector("#cartBadge");
+let headerCartPrice = document.querySelector("#headerCartPrice");
 
 function updateCartInfo(){
-    totalPriceElem.textContent = getTotalPrice();
-    numberOfItem.textContent = getNumberOfItems();
+    let totalPrice = getTotalPrice();
+    let itemCount = getNumberOfItems();
+    
+    // Update cart sidebar
+    totalPriceElem.textContent = "$" + totalPrice;
+    numberOfItem.textContent = itemCount;
+    
+    // Update header cart display
+    cartBadge.textContent = itemCount;
+    headerCartPrice.textContent = "$" + totalPrice;
+    
+    // Hide badge if cart is empty
+    if (itemCount === 0) {
+        cartBadge.style.display = 'none';
+    } else {
+        cartBadge.style.display = 'flex';
+    }
 }
 export function removeCartItemDOM(item){
     let itemToRemove = document.querySelector(`[data-item_id="${item.id}"]`);
