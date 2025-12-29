@@ -11,7 +11,7 @@ export class ProductItem{
         this.id = id;
         this.name = name;
         this.price = price;
-        this.imgSrc = imgSrc;
+        this.imgSrc = require("../assets/product-thumbnails/" + imgSrc);
         this.category = category;
         this.description = description;
         this.soldThisMonth = soldThisMonth;
