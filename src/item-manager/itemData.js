@@ -3,10 +3,10 @@ import { renderProductItems } from "../cart-feature/productItemDOM";
 import { addToCart } from "../cart-feature/cartManager";
 
 // Import images
-let bananaImg = require("../assets/resources/thumb-bananas.png");
-let milkImg = require("../assets/resources/thumb-milk.png");
-let tomatoImg = require("../assets/resources/thumb-tomatoes.png");
-let ketchupImg = require("../assets/resources/thumb-tomatoketchup.png");
+let bananaImg = require("../assets/product-thumbnails/thumb-bananas.png");
+let milkImg = require("../assets/product-thumbnails/thumb-milk.png");
+let tomatoImg = require("../assets/product-thumbnails/thumb-tomatoes.png");
+let ketchupImg = require("../assets/product-thumbnails/thumb-tomatoketchup.png");
 
 // Mock data object
 const mockProductData = [
