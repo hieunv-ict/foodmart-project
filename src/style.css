@@ -139,6 +139,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+    padding: var(--spacing-xs);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .header__icon-btn:hover {

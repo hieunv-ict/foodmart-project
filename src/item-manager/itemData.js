@@ -1,4 +1,4 @@
-import { ProductItem } from "./productItem";
+import { ProductItem } from "../models/ProductItem";
 import { renderProductItems } from "../cart-feature/productItemDOM";
 import { addToCart } from "../cart-feature/cartManager";
 
