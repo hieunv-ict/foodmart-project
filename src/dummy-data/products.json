@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Fresh Bananas",
+    "description": "Sweet and ripe bananas perfect for snacks and smoothies.",
+    "price": "12.5",
+    "imgSrc": "thumb-bananas.png",
+    "createAt": "2025-12-20",
+    "soldThisMonth": 72,
+    "soldThisYear": 88,
+    "category": "1",
+    "id": "1"
+  },
+  {
+    "name": "Organic Tomatoes",
+    "description": "Juicy and fresh organic tomatoes, great for salads and cooking.",
+    "price": "20",
+    "imgSrc": "thumb-tomatoes.png",
+    "createAt": "2025-12-18",
+    "soldThisMonth": 58,
+    "soldThisYear": 35,
+    "category": "1",
+    "id": "2"
+  },
+  {
+    "name": "Green Broccoli",
+    "description": "Fresh broccoli rich in vitamins, ideal for steaming and stir-frying.",
+    "price": "18",
+    "imgSrc": "thumb-brocoli.png",
+    "createAt": "2025-12-21",
+    "soldThisMonth": 24,
+    "soldThisYear": 18,
+    "category": "1",
+    "id": "3"
+  },
+  {
+    "id": "4",
+    "name": "Fresh Milk",
+    "description": "Full cream fresh milk sourced from local farms.",
+    "price": "25",
+    "imgSrc": "thumb-milk.png",
+    "createAt": "2025-12-22",
+    "soldThisMonth": 40,
+    "soldThisYear": 320,
+    "category": "2"
+  },
+  {
+    "id": "5",
+    "name": "Brown Eggs",
+    "description": "Free-range brown eggs, rich in nutrients and taste.",
+    "price": "30",
+    "imgSrc": "thumb-egg.png",
+    "createAt": "2025-12-20",
+    "soldThisMonth": 35,
+    "soldThisYear": 300,
+    "category": "2"
+  },
+  {
+    "id": "6",
+    "name": "Cheddar Cheese",
+    "description": "Aged cheddar cheese with a sharp and creamy flavor.",
+    "price": "40",
+    "imgSrc": "thumb-cheese.png",
+    "createAt": "2025-12-19",
+    "soldThisMonth": 22,
+    "soldThisYear": 180,
+    "category": "2"
+  },
+  {
+    "id": "7",
+    "name": "Fresh Chicken Drumsticks",
+    "description": "Tender and juicy chicken drumsticks, perfect for grilling or roasting.",
+    "price": "55",
+    "imgSrc": "thumb-chickens.png",
+    "createAt": "2025-12-18",
+    "soldThisMonth": 50,
+    "soldThisYear": 420,
+    "category": "3"
+  },
+  {
+    "id": "8",
+    "name": "Salmon Fillet",
+    "description": "Fresh Atlantic salmon fillet, rich in omega-3 fatty acids.",
+    "price": "120",
+    "imgSrc": "thumb-salmon.png",
+    "createAt": "2025-12-15",
+    "soldThisMonth": 30,
+    "soldThisYear": 290,
+    "category": "3"
+  },
+  {
+    "id": "9",
+    "name": "Pork Belly",
+    "description": "Premium pork belly, great for roasting or braising.",
+    "price": "75",
+    "imgSrc": "thumb-pork.png",
+    "createAt": "2025-12-17",
+    "soldThisMonth": 40,
+    "soldThisYear": 350,
+    "category": "3"
+  },
+  {
+    "id": "10",
+    "name": "Organic Green Tea",
+    "description": "Refreshing organic green tea leaves, perfect for a healthy boost.",
+    "price": "25",
+    "imgSrc": "thumb-tea.png",
+    "createAt": "2025-12-20",
+    "soldThisMonth": 60,
+    "soldThisYear": 480,
+    "category": "4"
+  },
+  {
+    "id": "11",
+    "name": "Fresh Orange Juice",
+    "description": "Cold-pressed fresh orange juice, full of natural vitamins and flavor.",
+    "price": "30",
+    "imgSrc": "thumb-orange.png",
+    "createAt": "2025-12-22",
+    "soldThisMonth": 80,
+    "soldThisYear": 720,
+    "category": "4"
+  },
+  {
+    "id": "12",
+    "name": "Sparkling Mineral Water",
+    "description": "Pure sparkling mineral water, ideal for refreshment anytime.",
+    "price": "15",
+    "imgSrc": "thumb-water.png",
+    "createAt": "2025-12-19",
+    "soldThisMonth": 100,
+    "soldThisYear": 900,
+    "category": "4"
+  },
+  {
+    "id": "13",
+    "name": "Whole Wheat Bread",
+    "description": "Freshly baked whole wheat bread, rich in fiber and perfect for sandwiches.",
+    "price": "20",
+    "imgSrc": "thumb-bread.png",
+    "createAt": "2025-12-18",
+    "soldThisMonth": 50,
+    "soldThisYear": 400,
+    "category": "5"
+  },
+  {
+    "id": "14",
+    "name": "Salted Potato Chips",
+    "description": "Crunchy salted potato chips, a perfect snack for any time of the day.",
+    "price": "15",
+    "imgSrc": "thumb-chip.png",
+    "createAt": "2025-12-20",
+    "soldThisMonth": 120,
+    "soldThisYear": 1100,
+    "category": "5"
+  },
+  {
+    "id": "15",
+    "name": "Chocolate Croissant",
+    "description": "Flaky croissant filled with rich chocolate, a delightful treat for breakfast.",
+    "price": "30",
+    "imgSrc": "thumb-croissant.png",
+    "createAt": "2025-12-21",
+    "soldThisMonth": 35,
+    "soldThisYear": 280,
+    "category": "5"
+  },
+  {
+    "id": "16",
+    "name": "Olive Oil",
+    "description": "Extra virgin olive oil, perfect for cooking and salad dressing.",
+    "price": "120",
+    "imgSrc": "thumb-oil.png",
+    "createAt": "2025-12-15",
+    "soldThisMonth": 60,
+    "soldThisYear": 500,
+    "category": "6"
+  },
+  {
+    "id": "17",
+    "name": "All-Purpose Flour",
+    "description": "Finely milled all-purpose flour, essential for baking and cooking.",
+    "price": "40",
+    "imgSrc": "thumb-flavor.png",
+    "createAt": "2025-12-16",
+    "soldThisMonth": 90,
+    "soldThisYear": 700,
+    "category": "6"
+  },
+  {
+    "id": "18",
+    "name": "Canned Tuna",
+    "description": "High-quality canned tuna, rich in protein and omega-3 fatty acids.",
+    "price": "35",
+    "imgSrc": "thumb-tuna.png",
+    "createAt": "2025-12-17",
+    "soldThisMonth": 45,
+    "soldThisYear": 360,
+    "category": "6"
+  }
+]

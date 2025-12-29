@@ -1,10 +1,15 @@
 import { ProductItem } from "../models/ProductItem";
+import { Category } from "../models/Category";
+
+// API base URL
+const BASE_URL = "https://6951f51c3b3c518fca110fca.mockapi.io/foodmart/api/v1";
 
 // AWS S3 base URL for product images
-const AWS_IMAGE_BASE_URL = "https://foodmart-mpfe.s3.ap-southeast-2.amazonaws.com/product-thumbnails/";
+const AWS_PRODUCT_IMAGE_BASE_URL = "https://foodmart-mpfe.s3.ap-southeast-2.amazonaws.com/product-thumbnails/";
+const AWS_CATEGORY_IMAGE_BASE_URL = "https://foodmart-mpfe.s3.ap-southeast-2.amazonaws.com/product-categories/";
 
 export async function fetchProductData(){
-    var response = await fetch('https://695231aa3b3c518fca11c5e8.mockapi.io/foodmart/api/v1/products');
+    var response = await fetch(`${BASE_URL}/products`);
         
         if (!response.ok) {
             throw new Error('Failed to fetch products: ' + response.status);
@@ -21,7 +26,7 @@ export async function getProductList(){
                 item.id,
                 item.name,
                 item.price,
-                AWS_IMAGE_BASE_URL + item.imgSrc,
+                AWS_PRODUCT_IMAGE_BASE_URL + item.imgSrc,
                 item.category,
                 item.description,
                 item.soldThisMonth,
@@ -29,4 +34,27 @@ export async function getProductList(){
             );
         });
     return products;
+}
+
+export async function fetchCategoryData(){
+    var response = await fetch(`${BASE_URL}/categories`);
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch categories: ' + response.status);
+        }
+        
+        var data = await response.json();
+        return data;
+}
+
+export async function getCategoryList(){
+    let items = await fetchCategoryData();
+    var categories = items.map(item => {
+            return new Category(
+                item.id,
+                item.name,
+                AWS_CATEGORY_IMAGE_BASE_URL + item.imgSrc
+            );
+        });
+    return categories;
 }

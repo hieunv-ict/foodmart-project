@@ -1,7 +1,8 @@
 import { ProductItem } from "../models/ProductItem";
 import { renderProductItems } from "../cart-feature/productItemDOM";
+import { renderCategories } from "../cart-feature/categoryDOM";
 import { addToCart } from "../cart-feature/cartManager";
-import { getProductList, fetchProductData } from "./fetchData";
+import { getProductList, getCategoryList } from "./fetchData";
 
 // Mock data object
 // const mockProductData = [
@@ -16,13 +17,16 @@ import { getProductList, fetchProductData } from "./fetchData";
 // ];
 
 const mockProductData = await getProductList();
+const categoryData = await getCategoryList();
+
 // Map mock data to ProductItem instances
 export let itemList = {};
 export let trendingProducts = [];
 export let bestSellingProducts = [];
-export let categories = [];
+export let categories = categoryData;
 
 console.log(mockProductData);
+console.log('Categories:', categoryData);
 
 // Build itemList
 mockProductData.forEach((product) => {
@@ -34,11 +38,13 @@ trendingProducts = [...mockProductData]
   .sort((a, b) => b.soldThisYear - a.soldThisYear)
   .slice(0, 10);
 
+  console.log('Trending Products:', trendingProducts);
 // Get top 10 best selling products by soldThisMonth (descending)
 bestSellingProducts = [...mockProductData]
   .sort((a, b) => b.soldThisMonth - a.soldThisMonth)
   .slice(0, 10);
 
+console.log('Best Selling Products:', bestSellingProducts);
 // Render products to DOM
 export function setProductCards() {
   let products = document.querySelectorAll(".product-card");
@@ -51,6 +57,7 @@ export function setProductCards() {
     }
   }
 
+  renderCategories(categories, "#categoryGrid");
   // Render trending products (top 10 by soldThisYear)
   renderProductItems(trendingProducts, "#trendingProductsGrid", addToCart);
 
@@ -59,14 +66,9 @@ export function setProductCards() {
     bestSellingProducts,
     "#bestSellingProductsGrid",
     addToCart,
-    true,
-    "Hot"
-  );
-}
 
-// Update product display when button is clicked
-function updateProductDisplay(products) {
-  const grid = document.getElementById("bestSellingProductsGrid");
-  grid.innerHTML = "";
-  renderProductItems(products, "#bestSellingProductsGrid", addToCart);
+  // Render categories
+  true,
+  "Hot"
+);
 }

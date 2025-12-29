@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "Fruits & Vegetables",
+    "imgSrc": "icon-vegetables-broccoli.png"
+  },
+  {
+    "id": "2",
+    "name": "Dairy & Eggs",
+    "imgSrc": "icon-bread-baguette.png"
+  },
+  {
+    "id": "3",
+    "name": "Meat & Seafood",
+    "imgSrc": "icon-bread-herb-flour.png"
+  },
+  {
+    "id": "4",
+    "name": "Beverages",
+    "imgSrc": "icon-animal-products-drumsticks.png"
+  },
+  {
+    "id": "5",
+    "name": "Bakery & Snacks",
+    "imgSrc": "icon-soft-drinks-bottle.png"
+  },
+  {
+    "id": "6",
+    "name": "Pantry Staples",
+    "imgSrc": "icon-wine-glass-bottle.png"
+  }
+]
