@@ -59,12 +59,13 @@ export function setProductCards() {
 
   renderCategories(categories, "#categoryGrid");
   // Render trending products (top 10 by soldThisYear)
-  renderProductItems(trendingProducts, "#trendingProductsGrid", addToCart);
+  renderProductItems(trendingProducts, "#trendingProductsGrid", true, addToCart);
 
   // Render best selling products (top 10 by soldThisMonth) with badges
   renderProductItems(
     bestSellingProducts,
     "#bestSellingProductsGrid",
+    false,
     addToCart,
 
   // Render categories
