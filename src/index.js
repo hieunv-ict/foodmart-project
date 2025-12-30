@@ -3,16 +3,44 @@ import "./style.css";
 import "./cart.css";
 
 import { addCartFeature } from "./cart-feature/cartDOM.js";
-import { setProductCards } from "./item-manager/itemData.js";
+import { setProductCards, updateTrendingProducts } from "./item-manager/itemData.js";
 addCartFeature();
 setProductCards();
+
+// Trending products filtering
+const trendingAllBtn = document.getElementById("trending-all-btn");
+const trendingFruitBtn = document.getElementById("trending-fruit-btn");
+const trendingJuiceBtn = document.getElementById("trending-juice-btn");
+
+function setActiveTrendingTab(activeBtn) {
+  [trendingAllBtn, trendingFruitBtn, trendingJuiceBtn].forEach(btn => {
+    if (btn) btn.classList.remove("products__tab--active");
+  });
+  if (activeBtn) activeBtn.classList.add("products__tab--active");
+}
+
+if (trendingAllBtn) {
+  trendingAllBtn.addEventListener("click", () => {
+    setActiveTrendingTab(trendingAllBtn);
+    updateTrendingProducts("all");
+  });
+}
+
+if (trendingFruitBtn) {
+  trendingFruitBtn.addEventListener("click", () => {
+    setActiveTrendingTab(trendingFruitBtn);
+    updateTrendingProducts("fruit");
+  });
+}
+
+if (trendingJuiceBtn) {
+  trendingJuiceBtn.addEventListener("click", () => {
+    setActiveTrendingTab(trendingJuiceBtn);
+    updateTrendingProducts("juice");
+  });
+}
+
 // Slider next and previous
-/**
- * @param {string} prevBtnId
- * @param {string} nextBtnId
- * @param {string} gridId
- * @param {number} gapSize
- */
 function setupSlider(prevBtnId, nextBtnId, gridId, gapSize) {
   const prevBtn = document.getElementById(prevBtnId);
   const nextBtn = document.getElementById(nextBtnId);
