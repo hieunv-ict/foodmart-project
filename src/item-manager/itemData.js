@@ -73,3 +73,35 @@ export function setProductCards() {
   "Hot"
 );
 }
+
+/**
+ * Filter and re-render trending products
+ * @param {'all' | 'fruit' | 'juice'} type
+ */
+export function updateTrendingProducts(type) {
+  let filteredList = [];
+
+  if (type === 'fruit') {
+    // Category 1: Fruits & Vegetables
+    filteredList = [...mockProductData]
+      .filter(p => p.category === "1")
+      .sort((a, b) => b.soldThisYear - a.soldThisYear)
+      .slice(0, 10);
+  } else if (type === 'juice') {
+    // Category 4: Beverages (mapping for "Juices")
+    filteredList = [...mockProductData]
+      .filter(p => p.category === "4")
+      .sort((a, b) => b.soldThisYear - a.soldThisYear)
+      .slice(0, 10);
+  } else {
+    // Default: All trending
+    filteredList = trendingProducts;
+  }
+
+  // Clear existing grid content
+  const grid = document.querySelector("#trendingProductsGrid");
+  if (grid) grid.innerHTML = "";
+
+  // Re-render
+  renderProductItems(filteredList, "#trendingProductsGrid", true, addToCart);
+}
