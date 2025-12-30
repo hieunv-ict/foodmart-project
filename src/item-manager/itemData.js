@@ -76,6 +76,7 @@ export function renderProductByCategory(category){
       return item.category === categoryId});
     console.log(productListByCategory);
     renderProductItems(productListByCategory, "#all-products-container", true, addToCart);
+}
     
 /**
  * Filter and re-render trending products
