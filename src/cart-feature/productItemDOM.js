@@ -123,15 +123,21 @@ function createProductCardDOM(productItem, onAddToCart, hasBadge = false, badgeT
 }
 
 // render products to grid container
-export function renderProductItems(products, gridSelector, onAddToCart, hasBadge = false, badgeText = "") {
+export function renderProductItems(products, gridSelector, isGridLayout, onAddToCart, hasBadge = false, badgeText = "") {
     const grid = document.querySelector(gridSelector);
     if (!grid) {
         console.error(`Grid container not found: ${gridSelector}`);
         return;
     }
-    
+    console.log("Render products: " + products.length);
     // Xóa nội dung cũ
     grid.innerHTML = '';
+    if(isGridLayout) {
+        grid.className = "products__grid"
+    }
+    else {
+        grid.className = "products__flex"
+    }
     
     // Thêm từng product vào grid
     products.forEach(product => {
