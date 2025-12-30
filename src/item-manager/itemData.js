@@ -4,17 +4,6 @@ import { renderCategories } from "../cart-feature/categoryDOM";
 import { addToCart } from "../cart-feature/cartManager";
 import { getProductList, getCategoryList } from "./fetchData";
 
-// Mock data object
-// const mockProductData = [
-//   // { id: "1", name: "Fresh Organic Bananas", price: 5, imgSrc: bananaImg, category:"Fruits", description:"",soldThisMonth: 10, soldthisYear: 100 },
-//   // { id: "2", name: "Whole Milk 1 Gallon", price: 10, imgSrc: milkImg },
-//   // { id: "3", name: "Organic Red Tomatoes", price: 8, imgSrc: tomatoImg },
-//   // { id: "4", name: "Premium Tomato Ketchup", price: 6, imgSrc: ketchupImg },
-//   // { id: "5", name: "Fresh Green Bananas", price: 4.5, imgSrc: bananaImg },
-//   // { id: "6", name: "Low Fat Milk", price: 9, imgSrc: milkImg },
-//   // { id: "7", name: "Cherry Tomatoes Pack", price: 7, imgSrc: tomatoImg },
-//   // { id: "8", name: "Organic Ketchup", price: 7.5, imgSrc: ketchupImg },
-// ];
 
 const mockProductData = await getProductList();
 const categoryData = await getCategoryList();
@@ -57,6 +46,8 @@ export function setProductCards() {
     }
   }
 
+  
+  console.log(categories);
   renderCategories(categories, "#categoryGrid");
   // Render trending products (top 10 by soldThisYear)
   renderProductItems(trendingProducts, "#trendingProductsGrid", true, addToCart);
@@ -74,6 +65,18 @@ export function setProductCards() {
 );
 }
 
+export function renderAllProducts(){
+  renderProductItems(mockProductData, "#all-products-container", true, addToCart);
+}
+
+export function renderProductByCategory(category){
+    //console.log(category);
+    let categoryId = category.id;
+    let productListByCategory = mockProductData.filter(item => {
+      return item.category === categoryId});
+    console.log(productListByCategory);
+    renderProductItems(productListByCategory, "#all-products-container", true, addToCart);
+    
 /**
  * Filter and re-render trending products
  * @param {'all' | 'fruit' | 'juice'} type

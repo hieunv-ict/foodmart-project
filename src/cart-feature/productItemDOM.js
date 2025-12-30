@@ -129,7 +129,6 @@ export function renderProductItems(products, gridSelector, isGridLayout, onAddTo
         console.error(`Grid container not found: ${gridSelector}`);
         return;
     }
-    console.log("Render products: " + products.length);
     // Xóa nội dung cũ
     grid.innerHTML = '';
     if(isGridLayout) {
